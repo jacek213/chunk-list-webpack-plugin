@@ -2,7 +2,7 @@ function ChunkListWebpackPlugin(options) {
   this.opts                    = {};
   this.opts.output             = options.output           || 'chunks-list.json';
   this.opts.groupByExtension   = options.groupByExtension || false;
-  this.opts.extensions         = options.extensions       || null;
+  this.opts.extensions         = options.extensions       || false;
 }
 
 ChunkListWebpackPlugin.prototype.apply = function(compiler) {

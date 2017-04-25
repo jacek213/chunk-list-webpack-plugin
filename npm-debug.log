@@ -1,0 +1,105 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@3.8.6
+3 info using node@v5.12.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/home/jgrzybowski/workspace/chunk-list-webpack-plugin',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /home/jgrzybowski/.npm/chunk-list-webpack-plugin/0.0.1/package.tgz not in flight; packing
+9 verbose correctMkdir /home/jgrzybowski/.npm correctMkdir not in flight; initializing
+10 info lifecycle chunk-list-webpack-plugin@0.0.1~prepublish: chunk-list-webpack-plugin@0.0.1
+11 silly lifecycle chunk-list-webpack-plugin@0.0.1~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/home/jgrzybowski/.npm/chunk-list-webpack-plugin/0.0.1/package.tgz',
+12 verbose tar pack   '/home/jgrzybowski/workspace/chunk-list-webpack-plugin' ]
+13 verbose tarball /home/jgrzybowski/.npm/chunk-list-webpack-plugin/0.0.1/package.tgz
+14 verbose folder /home/jgrzybowski/workspace/chunk-list-webpack-plugin
+15 verbose addLocalTarball adding from inside cache /home/jgrzybowski/.npm/chunk-list-webpack-plugin/0.0.1/package.tgz
+16 verbose correctMkdir /home/jgrzybowski/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd chunk-list-webpack-plugin@0.0.1
+18 verbose afterAdd /home/jgrzybowski/.npm/chunk-list-webpack-plugin/0.0.1/package/package.json not in flight; writing
+19 verbose correctMkdir /home/jgrzybowski/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /home/jgrzybowski/.npm/chunk-list-webpack-plugin/0.0.1/package/package.json written
+21 silly publish { name: 'chunk-list-webpack-plugin',
+21 silly publish   version: '0.0.1',
+21 silly publish   description: 'Webpack plugin which creates a json file listing all chunks produced during build',
+21 silly publish   main: 'index.js',
+21 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+ssh://git@github.com/jacek213/chunk-list-webpack-plugin.git' },
+21 silly publish   keywords: [ 'webpack', 'chunks', 'plugin' ],
+21 silly publish   author: { name: 'Jacek Grzybowski' },
+21 silly publish   license: 'MIT',
+21 silly publish   bugs: { url: 'https://github.com/jacek213/chunk-list-webpack-plugin/issues' },
+21 silly publish   homepage: 'https://github.com/jacek213/chunk-list-webpack-plugin#readme',
+21 silly publish   readme: '## Chunk List Webpack Plugin\nThis is a [webpack](http://webpack.github.io/) plugin which creates a json file listing all chunks produced during build.\n\n### Getting started\n\nInstall the plugin:\n\n```\nnpm install --save-dev chunk-list-webpack-plugin\n```\n\n### Usage\n\n`new ChunkListWebpackPlugin(options)`\n\n### Options\n\n* `output` - output file path within destination directory. Default: `chunks-list.json`.\n* `extensions` - only files with whitelisted extensions will be listed in file. Default: `false`.\n* `groupByExtension` - If set to true, output will contain object with files grouped by extensions as keys. If set to false - output returns an array. Default: `false`\n\n### License\n\nMIT\n',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: '19728caba656d4157ead2c1598fb3691fb1207df',
+21 silly publish   _id: 'chunk-list-webpack-plugin@0.0.1',
+21 silly publish   _shasum: 'a4682e70ee0ef8ba10b8200d92a5b91a4b8897d3',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name chunk-list-webpack-plugin
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'chunk-list-webpack-plugin',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   name: 'chunk-list-webpack-plugin',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/chunk-list-webpack-plugin
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading /home/jgrzybowski/.npm/chunk-list-webpack-plugin/0.0.1/package.tgz
+30 verbose request uri https://registry.npmjs.org/chunk-list-webpack-plugin
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 15:54:40
+33 verbose request using bearer token for auth
+34 verbose request id 807f889e1a9ccd1f
+35 http request PUT https://registry.npmjs.org/chunk-list-webpack-plugin
+36 http 403 https://registry.npmjs.org/chunk-list-webpack-plugin
+37 verbose headers { 'content-type': 'application/json',
+37 verbose headers   'cache-control': 'max-age=300',
+37 verbose headers   'content-length': '95',
+37 verbose headers   'accept-ranges': 'bytes',
+37 verbose headers   date: 'Tue, 25 Apr 2017 13:54:40 GMT',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   connection: 'keep-alive',
+37 verbose headers   'x-served-by': 'cache-fra1225-FRA',
+37 verbose headers   'x-cache': 'MISS',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1493128480.945894,VS0,VE897',
+37 verbose headers   vary: 'Accept-Encoding' }
+38 verbose request invalidating /home/jgrzybowski/.npm/registry.npmjs.org/chunk-list-webpack-plugin on PUT
+39 error publish Failed PUT 403
+40 verbose stack Error: "You cannot publish over the previously published version 0.0.1." : chunk-list-webpack-plugin
+40 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+40 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+40 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+40 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:199:22)
+40 verbose stack     at emitTwo (events.js:100:13)
+40 verbose stack     at Request.emit (events.js:185:7)
+40 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1036:10)
+40 verbose stack     at emitOne (events.js:95:20)
+40 verbose stack     at Request.emit (events.js:182:7)
+40 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:963:12)
+41 verbose statusCode 403
+42 verbose pkgid chunk-list-webpack-plugin
+43 verbose cwd /home/jgrzybowski/workspace/chunk-list-webpack-plugin
+44 error Linux 4.4.0-72-generic
+45 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+46 error node v5.12.0
+47 error npm  v3.8.6
+48 error code E403
+49 error "You cannot publish over the previously published version 0.0.1." : chunk-list-webpack-plugin
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]
