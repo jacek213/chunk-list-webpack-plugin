@@ -1,6 +1,6 @@
 {
   "name": "chunk-list-webpack-plugin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Webpack plugin which creates a json file listing all chunks produced during build",
   "main": "index.js",
   "scripts": {
