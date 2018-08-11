@@ -7,9 +7,10 @@ function ChunkListWebpackPlugin(options) {
 
 ChunkListWebpackPlugin.prototype.apply = function(compiler) {
   var OPTS = this.opts;
-  var chunksList = [];
 
   compiler.plugin('emit', function(compilation, callback) {
+    var chunksList = [];
+    
     compilation.chunks.forEach(function(chunk) {
       chunk.files.forEach(function(filename) {
         var ext = getFileExtension(filename);
