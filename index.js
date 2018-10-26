@@ -3,14 +3,15 @@ function ChunkListWebpackPlugin(options) {
   this.opts.output             = options.output           || 'chunks-list.json';
   this.opts.groupByExtension   = options.groupByExtension || false;
   this.opts.extensions         = options.extensions       || false;
+  this.opts.externalChunks     = options.externalChunks   || [];
 }
 
 ChunkListWebpackPlugin.prototype.apply = function(compiler) {
   var OPTS = this.opts;
 
   compiler.plugin('emit', function(compilation, callback) {
-    var chunksList = [];
-    
+    var chunksList = [].concat(OPTS.externalChunks);
+
     compilation.chunks.forEach(function(chunk) {
       chunk.files.forEach(function(filename) {
         var ext = getFileExtension(filename);
